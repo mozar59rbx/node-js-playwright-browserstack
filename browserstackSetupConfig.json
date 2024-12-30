@@ -1,0 +1,15 @@
+userName: mozar_TGFXP9
+accessKey: gQUeVNsoZ7vpdsxNPUna
+platforms:
+  - deviceName: Samsung Galaxy S22
+    browserName: chrome
+interactiveDebugging: true
+accessibility: false
+networkLogs: true
+testContextOptions:
+  skipSessionStatus: false
+  skipSessionName: false
+browserstackLocal: false
+browserStackLocalOptions:
+  skipBinaryInitialisation: false
+proxySettings: {}

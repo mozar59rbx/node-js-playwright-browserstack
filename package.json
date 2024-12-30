@@ -14,5 +14,9 @@
   "devDependencies": {
     "@playwright/test": "latest",
     "browserstack-node-sdk": "latest"
+  },
+  "dependencies": {
+    "@percy/cli": "^1.30.5",
+    "@percy/playwright": "^1.0.7"
   }
 }

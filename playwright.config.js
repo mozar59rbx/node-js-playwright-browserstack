@@ -1,31 +1,29 @@
-// This is a sample config for what users might be running locally
-const config = {
-  testDir: './tests',
-  testMatch: '**/bstack_test*.js',
+import { defineConfig, devices } from '@playwright/test';
+
+export default defineConfig({
+    testDir: './tests',
+  testMatch: '**/CC/PROSPECT/CR.js',
 
   /* Maximum time one test can run for. */
-  timeout: 90 * 1000,
+  timeout: 180000,
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
      * For example in `await expect(locator).toHaveText();`
      */
-    timeout: 5000,
+    timeout: 20000,
   },
   /* tests in parallel */
-  workers: 1,
+  workers: 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'line',
-  /* Configure projects for major browsers */
+  reporter: 'html',
   projects: [
     {
-      name: 'chrome',
+      name: 'Mobile Safari',
       use: {
-        browserName: 'chromium',
-        channel: 'chrome',
+        ...devices['iPhone 13'],
+        isMobile: true
       },
     },
-  ],
-};
-
-module.exports = config;
+  ]
+});
